@@ -1,30 +1,33 @@
-{ 
+{
+  "name": "digital-project",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "gulp dev",
-    "build": "gulp build"
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "dependencies": {
+    "pinia": "^2.2.6",
+    "swiper": "^11.1.15",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/preset-env": "^7.16.11",
-    "babel-loader": "^8.2.3",
-    "browser-sync": "^2.29.3",
-    "del": "^6.1.1",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-avif": "^1.1.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-notify": "^4.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify-es": "^3.0.0",
-    "gulp-webp": "^4.0.1",
-    "sass": "^1.64.1"
-  },
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "IE 10"
-  ]
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.9.3",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/tsconfig": "^0.7.0",
+    "npm-run-all2": "^7.0.1",
+    "sass": "^1.83.0",
+    "sass-loader": "^16.0.4",
+    "typescript": "~5.6.3",
+    "vite": "^6.0.1",
+    "vite-plugin-vue-devtools": "^7.6.5",
+    "vue-tsc": "^2.1.10"
+  }
 }
