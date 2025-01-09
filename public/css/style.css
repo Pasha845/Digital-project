@@ -1,0 +1,244 @@
+button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;text-decoration:none;color:inherit}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=search]{outline-offset:-2px}summary{display:list-item}[hidden],template{display:none}*,
+::after,
+::before {
+	box-sizing: inherit;
+}
+
+@font-face {
+	font-family: "TTHoves";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+  src: local(""),
+    url('../fonts/TTHoves-Regular.woff2') format('woff2'),
+    url('../fonts/TTHoves-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: "TTHoves";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+  src: local(""),
+    url('../fonts/TTHoves-Medium.woff') format('woff2'),
+    url('../fonts/TTHoves-Medium.woff2') format('woff');
+}
+
+@font-face {
+	font-family: "TTHoves";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+  src: local(""),
+    url('../fonts/TTHoves-Bold.woff') format('woff2'),
+    url('../fonts/TTHoves-Bold.woff2') format('woff');
+}
+
+@font-face {
+	font-family: "TTHoves";
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+  src: local(""),
+    url('../fonts/TTHoves-Light.woff') format('woff2'),
+    url('../fonts/TTHoves-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: "SFProDisplay";
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+  src: local(""),
+    url('../fonts/SFProDisplay-Black.woff') format('woff2'),
+    url('../fonts/SFProDisplay-Black.woff') format('woff');
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+  flex-shrink: 0;
+}
+
+picture {
+  flex-shrink: 0;
+}
+
+p, h1, h2, h3 {
+	margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+:root {
+  --white: #fff;
+  --dark: #333;
+  --black: #000;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	font-family: "TTHoves", sans-serif;
+	font-size: 16px;
+  line-height: 156%;
+  font-weight: 300;
+  color: var(--black);
+  background: var(--white);
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1170px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.main-title,
+.title {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 300;
+  color: #bdbdbd;
+}
+
+.main-title {
+  margin-bottom: 94px;
+  max-width: 330px;
+}
+
+.main-title span {
+  font-weight: 700;
+  color: #333;
+}
+
+.link {
+  display: inline-block;
+  padding: 30px 50px;
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dark);
+  background: var(--white);
+  transition: color .3s, background-color .3s;
+}
+
+.link svg {
+  margin-left: 15px;
+}
+
+.link:hover {
+  color: var(--white);
+  background-color: rgb(90, 62, 247);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  padding: 44px;
+  padding-left: 46px;
+  padding-bottom: 23px;
+  text-align: center;
+  background: var(--white);
+  transform: translate(-50%, -50%);
+}
+
+.banner-exit {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  line-height: 0;
+}
+
+.banner-image {
+  margin-bottom: 24px;
+}
+
+.banner-title {
+  margin-bottom: 27px;
+  font-size: 24px;
+  line-height: 108%;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.banner-text {
+  margin-bottom: 41px;
+  max-width: 426px;
+  font-size: 14px;
+  line-height: 186%;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #4f4f4f;
+}
+
+.banner-btn {
+  padding: 15px 128px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--white);
+  background: var(--dark);
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .banner {
+    padding: 20px;
+    width: 260px;
+  }
+
+  .banner-btn {
+    padding: 15px 0;
+    width: 100%;
+  }
+}
